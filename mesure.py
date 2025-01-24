@@ -6,6 +6,11 @@ from numpy.random import normal
 trig = 18
 echo = 24
 
+io.setmode(io.BCM)
+io.setup(trig , io.OUT)
+io.output(trig , io.LOW)
+io.setup(echo , io.IN)
+
 
 def mesure_distance():
     io.output(trig, True)
